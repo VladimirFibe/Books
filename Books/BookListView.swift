@@ -13,23 +13,8 @@ struct BookListView: View {
                 } else {
                     List {
                         ForEach(books) { book in
-                            HStack(spacing: 10) {
-                                book.icon
-                                VStack {
-                                    Text(book.title)
-                                        .font(.title2)
-                                    Text(book.author)
-                                        .foregroundStyle(.secondary)
-                                    if let rating = book.rating {
-                                        HStack {
-                                            ForEach(0..<rating, id: \.self) { _ in
-                                                Image(systemName: "star.fill")
-                                                    .imageScale(.small)
-                                                    .foregroundStyle(.yellow)
-                                            }
-                                        }
-                                    }
-                                }
+                            NavigationLink(destination: { EditBookView(book: book)}) {
+                                ExtractedView(book: book)
                             }
                         }
                         .onDelete { indexSet in
@@ -61,4 +46,28 @@ struct BookListView: View {
 #Preview {
     BookListView()
         .modelContainer(for: Book.self, inMemory: true)
+}
+
+struct ExtractedView: View {
+    let book: Book
+    var body: some View {
+        HStack(spacing: 10) {
+            book.icon
+            VStack {
+                Text(book.title)
+                    .font(.title2)
+                Text(book.author)
+                    .foregroundStyle(.secondary)
+                if let rating = book.rating {
+                    HStack {
+                        ForEach(0..<rating, id: \.self) { _ in
+                            Image(systemName: "star.fill")
+                                .imageScale(.small)
+                                .foregroundStyle(.yellow)
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
