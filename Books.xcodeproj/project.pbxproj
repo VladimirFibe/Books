@@ -11,6 +11,7 @@
 		020B664B2B3BA37A00D7AC0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B664A2B3BA37A00D7AC0A /* ContentView.swift */; };
 		020B664D2B3BA37B00D7AC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020B664C2B3BA37B00D7AC0A /* Assets.xcassets */; };
 		020B66502B3BA37B00D7AC0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020B664F2B3BA37B00D7AC0A /* Preview Assets.xcassets */; };
+		020B66572B3BB1A100D7AC0A /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B66562B3BB1A100D7AC0A /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		020B664A2B3BA37A00D7AC0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		020B664C2B3BA37B00D7AC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		020B664F2B3BA37B00D7AC0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		020B66562B3BB1A100D7AC0A /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		02BDBEB72B3C206900A42FA0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 		020B663C2B3BA37A00D7AC0A = {
 			isa = PBXGroup;
 			children = (
+				02BDBEB72B3C206900A42FA0 /* README.md */,
 				020B66472B3BA37A00D7AC0A /* Books */,
 				020B66462B3BA37A00D7AC0A /* Products */,
 			);
@@ -52,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				020B66482B3BA37A00D7AC0A /* BooksApp.swift */,
+				020B66562B3BB1A100D7AC0A /* Book.swift */,
 				020B664A2B3BA37A00D7AC0A /* ContentView.swift */,
 				020B664C2B3BA37B00D7AC0A /* Assets.xcassets */,
 				020B664E2B3BA37B00D7AC0A /* Preview Content */,
@@ -139,6 +144,7 @@
 			files = (
 				020B664B2B3BA37A00D7AC0A /* ContentView.swift in Sources */,
 				020B66492B3BA37A00D7AC0A /* BooksApp.swift in Sources */,
+				020B66572B3BB1A100D7AC0A /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
