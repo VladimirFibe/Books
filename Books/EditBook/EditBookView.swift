@@ -45,10 +45,11 @@ struct EditBookView: View {
                 Text("Author").foregroundStyle(.secondary)
             }
             Divider()
-            Text("Summary").foregroundStyle(.secondary)
+            Text("Summary")
+                .foregroundStyle(.secondary)
+                .frame(maxWidth: .infinity, alignment: .leading)
             TextEditor(text: $viewModel.summary)
                 .padding(5)
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color(uiColor: .tertiarySystemFill), lineWidth: 2))
         }
     }
 
@@ -107,8 +108,9 @@ struct EditBookView: View {
 }
 
 #Preview {
-    NavigationStack {
-        BookListView()
-            .modelContainer(for: Book.self, inMemory: true)
+    let preview = Preview(Book.self)
+    return NavigationStack {
+        EditBookView(book: Book.sampleBooks[4])
+            .modelContainer(preview.container)
     }
 }

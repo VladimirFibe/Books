@@ -3,7 +3,7 @@ import SwiftData
 
 struct BookListView: View {
     @Environment(\.modelContext) private var context
-    @Query(sort: \Book.title) private var books: [Book]
+    @Query(sort: \Book.status) private var books: [Book]
     @State private var createNewBook = false
     var body: some View {
         NavigationStack {
@@ -44,8 +44,10 @@ struct BookListView: View {
 }
 
 #Preview {
-    BookListView()
-        .modelContainer(for: Book.self, inMemory: true)
+    let preview = Preview(Book.self)
+    preview.addExamples(Book.sampleBooks)
+    return BookListView()
+        .modelContainer(preview.container)
 }
 
 struct ExtractedView: View {

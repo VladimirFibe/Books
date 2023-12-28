@@ -21,7 +21,7 @@ final class EditBookViewModel: ObservableObject {
 
     init(book: Book) {
         self.book = book
-        status = book.status
+        status = book.statusFromRaw
         rating = book.rating
         title = book.title
         author = book.author
@@ -32,7 +32,7 @@ final class EditBookViewModel: ObservableObject {
     }
     
     func update() {
-        book.status = status
+        book.status = status.rawValue
         book.rating = rating
         book.title = title
         book.author = author
@@ -43,7 +43,7 @@ final class EditBookViewModel: ObservableObject {
     }
 
     var changed: Bool {
-        status != book.status
+        status != book.statusFromRaw
         || rating != book.rating
         || title != book.title
         || author != book.author
